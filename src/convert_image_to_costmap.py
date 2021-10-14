@@ -27,7 +27,7 @@ map_to_send=OccupancyGrid()
 def main(args):
    pub=rospy.Publisher('avoid_image',Int8MultiArray,queue_size=1)
    pub_map=rospy.Publisher('avoid_map',OccupancyGrid,queue_size=1)
-   rospy.init_node('avoid_image')
+   rospy.init_node('avoid_image') 
    r = rospy.Rate(100)
    while not rospy.is_shutdown():
         cap = cv2.VideoCapture(0)
